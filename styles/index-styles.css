@@ -1,0 +1,587 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    height: 60px;
+    background-color: #1a1a1a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 11;
+    /*overflow: hidden;*/
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    line-height: 60px;
+    display: block;
+}
+
+/*
+account-page-button
+*/
+
+#account-page-button {
+    display: none;
+}
+
+#account-page-button:checked + .account-page {
+    display: flex;
+}
+
+.account-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(26, 26, 26, 0.6);
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.account-close-form {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.account-close-form:hover img {
+    opacity: 0.8;
+}
+
+.account-close-form img {
+    width: 18px;
+}
+
+.account-box {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background-color: #1a1a1a;
+    z-index: 99;
+    border-radius: 16px;
+    color: white;
+    padding: 60px 32px 32px 32px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-box-title {
+    font-size: 1.45em;
+    margin-bottom: 24px;
+}
+
+.account-create-new {
+    font-size: 1.1em;
+}
+
+.account-create-new a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+.account-box form {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-box form .inputing {
+    display: block;
+    font-size: 1.2em;
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.account-box form .account-enter-button {
+    width: 80px;
+    height: 30px;
+    font-size: 1.05em;
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    color: white;
+    background-color: #2eb9ff;
+    cursor: pointer;
+}
+
+.account-box form .account-enter-button:hover {
+    background-color: #00aaff;
+}
+
+#account-name {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    line-height: 60px;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+}
+
+.account-page-icon {
+    position: absolute;
+    border-radius: 100px;
+    background-color: inherit;
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.account-page-icon img {
+    width: 36px;
+}
+
+.account-page-icon:hover {
+    background-color: #696969;
+}
+
+#account-page-button:checked + label {
+}
+
+
+/*
+small laptop
+*/
+
+@media screen and (max-width: 940px) {
+    main {
+        position: relative;
+        top: 60px;
+        display: flex;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+
+    .main-page {
+        background-color: white;
+        border-radius: 12px;
+        padding: 40px;
+        width: 600px !important;
+        margin: 40px !important;
+        min-width: 480px !important;
+        border: 1px solid #e2e2e2;
+        box-sizing: border-box;
+    }
+
+    .main-comments {
+        border-radius: 12px;
+        padding: 40px;
+        width: 600px !important;
+        margin: 0 40px 40px !important;
+        min-width: 480px;
+        border: 1px solid #e2e2e2;
+        background-color: white;
+        position: relative;
+        box-sizing: border-box;
+    }
+}
+
+
+/*
+small screen
+*/
+
+@media screen and (max-width: 500px) {
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    main {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-page {
+        width: 92% !important;
+        padding: 16px !important;
+        margin: 30px 20px !important;
+        position: relative;
+        min-width: 200px !important;
+    }
+
+    .main-title {
+        margin: 10px 0 20px !important;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .main-content li {
+        width: 300px !important;
+    }
+
+    .one-of-articles {
+        margin: 0 auto;
+    }
+
+    .main-content ul {
+        align-items: center !important;
+    }
+
+    .date {
+        margin-bottom: 10px;
+    }
+
+    .one-of-articles div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-title {
+        padding-left: 0 !important;
+    }
+
+    #account-name {
+        display: none;
+    }
+
+/*comments*/
+
+    .main-comments {
+        width: 92% !important;
+        padding: 16px !important;
+        margin: 0 20px 30px !important;
+        position: relative;
+        min-width: 200px !important;
+    }
+
+/*    footer*/
+
+    .footer-box.info {
+        padding-right: 5px !important;
+        text-align: center !important;
+    }
+
+    .footer-box.contact {
+        padding-left: 5px !important;
+    }
+
+}
+
+q {
+    font-style: italic;
+    quotes: "\00ab" "\00bb";
+}
+
+main {
+    position: relative;
+    top: 60px;
+    display: flex;
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.main-page {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 480px;
+    /*width: 700px;*/
+    /*margin: 40px;*/
+    margin: 40px 20px 40px 40px;
+    /*min-width: 480px;*/
+    min-width: 400px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+}
+
+.main-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.main-content ul li {
+    margin-bottom: 20px;
+}
+
+.one-of-articles {
+    text-decoration: none;
+    color: black;
+}
+
+.one-of-articles > div {
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    /*text-align: center;*/
+    border: 2px solid #e5e5e5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.one-of-articles > div:hover {
+    transform: translateY(-1px);
+    transition: all .18s;
+    box-shadow: 0 1px 2px 0 #cacaca, 0 2px 6px 2px #e2e2e2;
+}
+
+.one-of-articles:active > div {
+    /*transform: scaleX(1.05) scaleY(1.05);*/
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px 0 #cacaca;
+}
+
+.main-title {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    box-sizing: border-box;
+}
+
+.one-of-articles .date {
+    display: flex;
+    background-color: #a8e2f5;
+    border-radius: 100px;
+    width: 60px;
+    min-width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    height: 60px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    position: relative;
+}
+
+.date-number {
+    font-weight: bold;
+}
+
+.content-title {
+    padding-left: 36px;
+    font-size: 1.1em;
+    width: 100%;
+    /*font-family: 'Roboto Slab', serif;*/
+}
+
+.date.soon::after {
+    content: 'SOON';
+    position: absolute;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 3px;
+    bottom: 2px;
+    box-shadow: 0 1px 2px grey;
+    right: -10px;
+    background-color: red;
+    color: white;
+}
+
+/*
+comments
+*/
+
+.main-comments {
+    border-radius: 12px;
+    padding: 40px;
+    width: 660px;
+    /*width: 700px;*/
+    /*margin: 0 40px 40px;*/
+    margin: 40px 40px 40px 20px;
+    min-width: 480px;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.block-comments {
+    margin-bottom: 30px;
+}
+
+.comment {
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #f0f0f0;
+    background-color: #fff8fc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+    margin-bottom: 18px;
+    position: relative;
+    /*transition: all 0.3s cubic-bezier(.25,.8,.25,1); .24s;*/
+}
+
+.block-comments .comment:nth-child(2n) {
+    background-color: #fffcf7;
+}
+
+.block-comments .comment:nth-child(3n) {
+    background-color: #f4f7ff;
+
+}
+
+.block-comments .comment:nth-child(4n) {
+    background-color: #f6fff6;
+}
+
+.comment-author-name {
+    /*padding-left: 10px;*/
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.comment-text {
+    margin-bottom: 36px;
+    word-break: break-word;
+}
+
+.comment-date {
+    font-size: 0.9em;
+    text-align: right;
+    color: grey;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.comment-likes {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.comment-likes img {
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.comment-likes-amount {
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+}
+
+.new-comment-title {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.new-comment-type {
+    margin-bottom: 16px;
+    display: block;
+}
+
+.new-comment-type textarea {
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+    padding: 8px;
+}
+
+.comment-button {
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 3px 6px;
+    border: 1px solid grey;
+    width: 100px;
+    line-height: 20px;
+    box-shadow: 0 1px 2px grey;
+    /*border: 1px solid #f0f0f0;*/
+    color: black;
+    /*background-color: #2eb9ff;*/
+    background-color: white;
+    transition: .24s;
+    box-sizing: border-box;
+}
+
+.comment-button:hover {
+    background-color: #84d6ff;
+    color: white;
+}
+
+#new-comment-typing {
+    border-radius: 10px;
+}
+
+.comment-likes img:active {
+    transition: scale .24s;
+    transform: scale(1.4);
+}
+
+.submitting {
+    position: relative;
+}
+
+#number-of-char {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+/*
+footer
+*/
+
+footer {
+    background-color: #4e4e4e;
+    border-top: 3px solid #969696;
+    position: relative;
+    bottom: -60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.footer-box {
+    padding: 23px 20px 20px;
+    width: 200px;
+}
+
+.footer-box.info {
+    text-align: right;
+}
+
+.footer-box.contact {
+
+}
+
+.footer-box.contact ul {
+    padding-inline-start: 20px;
+    margin: 10px 0;
+}
+
+.footer-box.contact a {
+    color: white;
+}
+
+
+
+
